@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="03.css">
+    <title>TO-DO List</title>
+</head>
+<body>
+    <div class="container">
+       <h1 class="todo-heading">
+  TO-DO List
+  <img class="profile-image" src="10.jpg" alt="Your Profile Image">
+</h1>
+
+        <div class="input-container">
+            <input type="text" id="task" placeholder="Add a new task..." required>
+            <textarea id="description" placeholder="Task Description"></textarea>
+            <input type="datetime-local" id="deadline">
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <select id="status">
+                <option value="not-started">Not Started</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+            <label for="project">Project:</label>
+            <input type="text" id="project" placeholder="Project Name">
+             <textarea id="taskNotes" placeholder="Add task notes..."></textarea>
+            <button id="addTask">Add</button>
+        </div>
+        <div class="filter-container">
+            <label for="filterPriority">Filter by Priority:</label>
+            <select id="filterPriority">
+                <option value="all">All</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+           
+        </div>
+        <ul id="taskList"></ul>
+        <button id="clearTasks">Clear All Tasks</button>
+       
+    </div>
+    <script src="03.js"></script>
+</body>
+</html>

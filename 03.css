@@ -1,0 +1,285 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  margin: 5%;
+  padding: 5%;
+  animation: colorChange 4s linear infinite; /* 4s for a 2-second color change (2s for each color) */
+  border: 10px double transparent; /* Set an initial transparent border */
+}
+
+@keyframes colorChange {
+  0% {
+    border-color: red; /* Initial color */
+  }
+  50% {
+    border-color: blue; /* Color change after 2 seconds */
+  }
+  100% {
+    border-color: yellow; /* Back to the initial color after 2 seconds */
+  }
+}
+
+
+.container {
+    background-color: black;
+    max-width: 87%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    border: 10px double #fff; /* Double border with white color */
+    padding: 10px;
+    margin :5px;
+    border-radius: px;
+    animation: textMove 8s linear infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes textMove {
+    0% {
+        color: white;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+        transform: translateX(0);
+    }
+    25% {
+        color: pink;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.9);
+        transform: translateX(20px);
+    }
+    50% {
+        color: yellow;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.9);
+        transform: translateX(0);
+    }
+    75% {
+        color: royalblue;
+        text-shadow: 0 0 10px rgba(0, 0, 255, 0.9);
+        transform: translateX(-20px);
+    }
+    100% {
+        color: white;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+        transform: translateX(0);
+    }
+}
+.input-container input,
+.input-container textarea,
+.input-container select {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+    background-color: #f2f2f2; /* Add a background color */
+    color: #333; /* Text color */
+    font-size: 16px; /* Font size */
+    /* Add any additional styles you want */
+}
+
+.input-container input::placeholder,
+.input-container textarea::placeholder,
+.input-container select::placeholder {
+    color: green; /* Placeholder text color */
+}
+
+.input-container input:focus,
+.input-container textarea:focus,
+.input-container select:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    color:green;
+}
+
+
+button {
+    display: block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    text-transform: uppercase; /* Uppercase the text */
+    letter-spacing: 1px; /* Add letter spacing for text */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.95); /* Slight scaling down when clicked */
+}
+
+/* Add a disabled state */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Style the disabled button text */
+button:disabled::before {
+    content: "Disabled";
+    display: block;
+}
+
+
+.filter-container {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color:white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    color:blue;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: 20;
+    border: 6px double red;
+@keyframes border {
+    0% {
+        color: white;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+        transform: translateX(0);
+    }
+    25% {
+        color: pink;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.9);
+        transform: translateX(20px);
+    }
+    50% {
+        color: yellow;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.9);
+        transform: translateX(0);
+    }
+    75% {
+        color: royalblue;
+        text-shadow: 0 0 10px rgba(0, 0, 255, 0.9);
+        transform: translateX(-20px);
+    }
+    100% {
+        color: white;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+        transform: translateX(0);
+    }
+}
+    width:80%;
+}
+
+ul li {
+    padding: 10px;
+    background-color: #f2f2f2;
+    margin:0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+ul li:hover {
+    background-color: #fff;
+    transform: scale(1.02);
+}
+
+ul li:child {
+    font-weight: bold;
+}
+
+ul li:last-child {
+    border-bottom: 2px solid #ccc;
+
+}
+
+ul li.highlighted {
+    background-color: yellow;
+    color: #333;
+    font-weight: bold;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+/* Apply animations to all list items */
+ul li:hover, ul li.highlighted {
+    animation: pulse 2s infinite alternate; /* Blink effect */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: #fff;
+    }
+    100% {
+        transform: scale(1.15);
+        background-color: yellow;
+    }
+}
+
+
+li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#clearTasks {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#clearTasks:hover {
+    background-color: #FF0000;
+}
+
+#taskNotes {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+
+#priority, #status {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+.profile-image {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  border-radius: 50%; /* Creates a circular shape for the image */
+  border: 2px solid yellow; /* Adds a white border around the image */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow to the image */
+  display: block;
+  margin: 0 auto 10px; /* Centers the image and adds some space below it */
+}
+
